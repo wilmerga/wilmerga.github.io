@@ -1,0 +1,56 @@
+<div id="ball" style="
+  z-index:5;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  background:green"></div>
+
+<script>
+
+var velocity = 100;
+var xposition = 0;
+var yposition = 0;
+var ball = document.getElementById('ball');
+var xMax = self.innerWidth
+var xMin = 0
+var yMax = self.innerHeight
+var yMin = 0
+var xreverse = 1
+var yreverse = 1
+
+// YOUR CODE 
+// ----------------
+function moveBall(){
+    xposition = xposition + xreverse*velocity;
+    yposition = yposition + yreverse*velocity;   
+    ball.style.left = xposition + 'px'
+    ball.style.top = yposition + 'px'
+    checkX()
+    checkY()
+}
+
+function checkX(){
+  if(xposition >= xMax){
+    xreverse = -1;
+  }else if(xposition <= xMin){
+    xreverse = 1;
+  }else{
+    xreverse = xreverse
+  }
+}
+
+function checkY(){
+  if(yposition >= yMax){
+    yreverse = -1;
+  }else if(yposition <= yMin){
+    yreverse = 1;
+  }else{
+    yreverse = yreverse
+  }
+}
+
+setInterval(moveBall, 500)
+</script>
