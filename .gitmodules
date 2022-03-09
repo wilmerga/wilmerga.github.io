@@ -1,0 +1,6 @@
+[submodule "Week_7/greeting"]
+	path = Week_7/greeting
+	url = git@github.com:wilmerga/greeting.git
+[submodule "Week_7/mitfacts"]
+	path = Week_7/mitfacts
+	url = git@github.com:wilmerga/mitfacts.git
